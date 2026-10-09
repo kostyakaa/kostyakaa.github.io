@@ -1,0 +1,143 @@
+/* Основные стили и сброс */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background: linear-gradient(135deg, #ffe6f2 0%, #fff0e6 100%);
+    color: #5a4a4a;
+    line-height: 1.6;
+    min-height: 100vh;
+    /* Милый курсор-лапка (замени на свой URL, если хочешь) */
+    cursor: url('https://cur.cursors-4u.net/cursors/exp/exp-76.png'), auto;
+}
+
+/* Шапка */
+.cute-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff99cc;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(255, 153, 204, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #bfa5a5;
+    margin-top: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #ffb3d9;
+    font-size: 2rem;
+}
+
+/* Секции */
+section {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+}
+
+/* Сетка для гифок */
+.gif-grid, .png-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.gif-card, .png-card {
+    background: #fff;
+    border-radius: 25px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+.gif-card:hover, .png-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(255, 153, 204, 0.4);
+}
+
+/* Картинки */
+.png-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+.png-card p {
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: #ff99cc;
+}
+
+/* Ссылки-кнопки */
+.links-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cute-btn {
+    display: inline-block;
+    background: #ffccdd;
+    color: #6b4f4f;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(255, 153, 204, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cute-btn:hover {
+    background: #ff99cc;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 153, 204, 0.5);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50px 50px 0 0;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #ff99cc;
+    text-decoration: none;
+}
+
+.small {
+    font-size: 0.9rem;
+    color: #b0a0a0;
+    margin-top: 0.5rem;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 600px) {
+    h1 { font-size: 2.2rem; }
+    .cute-header { padding: 2rem 1rem; }
+}
