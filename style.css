@@ -47,14 +47,14 @@ section {
     padding: 0 1.5rem;
 }
 
-.gif-grid, .png-grid {
+.gif-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     justify-items: center;
 }
 
-.gif-card, .png-card {
+.gif-card {
     background: #fff;
     border-radius: 25px;
     padding: 1rem;
@@ -63,24 +63,21 @@ section {
     width: 100%;
     max-width: 320px;
     text-align: center;
+    overflow: hidden;
 }
 
-.gif-card:hover, .png-card:hover {
+.gif-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 30px rgba(255, 153, 204, 0.4);
 }
 
-.png-card img {
+.gif-card img,
+.gif-card .tenor-gif-embed {
     width: 100%;
     height: auto;
     border-radius: 20px;
     display: block;
-}
-
-.png-card p {
-    margin-top: 0.75rem;
-    font-weight: 700;
-    color: #ff99cc;
+    object-fit: cover;
 }
 
 .links-flex {
